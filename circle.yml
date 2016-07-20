@@ -1,0 +1,17 @@
+machine:
+  environment:
+    NODE_ENV: test
+  hosts:
+    localhost: 127.0.0.1
+  node:
+    version: 0.10.41
+
+dependencies:
+  cache_directories:
+    - "node_modules"
+  override:
+    - pwd; npm install
+
+test:
+  override:
+    - npm test
